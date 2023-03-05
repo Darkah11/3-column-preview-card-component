@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 50px 30px;
+}
+.grid {
+    display: grid;
+}
+.grid-card {
+    padding: 40px 30px;
+    max-width: 290px;
+    margin: auto;
+}
+.grid-card h2 {
+    margin-top: 20px;
+    font-family: "big shoulders display", Arial, Helvetica, sans-serif;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.grid-card p {
+    margin-top: 10px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "lexend deca", Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    font-size: 15px;
+}
+.learn-more-btn {
+    margin-top: 20px;
+    border: none;
+    background-color: hsl(0, 0%, 95%);
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family: "lexend deca", Arial, Helvetica, sans-serif;
+}
+.sedan {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 10px 0 0;
+}
+.suv {
+    background-color: hsl(184, 100%, 22%);
+}
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 10px 10px;
+}
+.sedan .learn-more-btn {
+    color: hsl(31, 77%, 52%);
+}
+.suv .learn-more-btn {
+    color: hsl(184, 100%, 22%);
+}
+.luxury .learn-more-btn {
+    color: hsl(179, 100%, 13%);
+}
+
+
+@media (min-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        width: fit-content;
+        margin: auto;
+    }
+    .sedan {
+        border-radius: 10px 0 0 0;
+    }
+    .suv {
+        border-radius: 0 10px 10px 0;
+    }
+}
+@media (min-width: 900px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .sedan {
+        border-radius: 10px 0 0 10px;
+    }
+    .suv {
+        border-radius: 0;
+    }
+    .luxury {
+        border-radius: 0 10px 10px 0;
+    }
+    .learn-more-btn {
+        margin-top: 70px;
+    }
+    .grid-card {
+        padding: 40px;
+    }
+    .grid-card h2 {
+        margin-top: 20px;
+    }
+    .grid-card p {
+        margin-top: 20px;
+    }
+}
